@@ -12,28 +12,38 @@ body {
 	color: #ffffff;
 }
 
-header {
+div.waves {
 	position: fixed;
-	top: 8px;
+	bottom: 0px;
 	left: 0px;
 	width: 100%;
 	overflow: hidden;
-	z-index: 1000001;
-	font-size: 19px;
-	font-variation-settings: "wght" 800;
+	z-index: 1000002;
+		background: linear-gradient(to bottom,
+		#ffffff00 54%, #006bff 54% 85%, #000fff 85% );
 }
 
-header h1, header h2 {
+div.waves div {
 	display: flex;
 }
 
-h1 span, h2 span {
+div.waves div.wave-one {
+	position: relative;
+	top: 40px;
+	/* z-index: 1000001; */
+}
+
+div.waves div.wave-one {
+	/* z-index: 1000000; */
+}
+
+div.waves span {
 	width: 150px;
 	flex: 0 0 auto;
 	display: inline-block;
 }
 
-h2 span {
+div.wave-two span {
 	width: 250px;
 }
 
