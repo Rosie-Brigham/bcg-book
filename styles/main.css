@@ -1,10 +1,10 @@
 @font-face {
 	font-family: PT Root;
-	src: url(ptroot.woff2)
+	src: url(../ptroot.woff2)
 }
 
 body {
-	font-family: PT Root;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	line-height: 1.5;
 	
@@ -30,11 +30,6 @@ div.waves div {
 div.waves div.wave-one {
 	position: relative;
 	top: 40px;
-	/* z-index: 1000001; */
-}
-
-div.waves div.wave-one {
-	/* z-index: 1000000; */
 }
 
 div.waves span {
@@ -71,13 +66,23 @@ section div.slides {
 	position: relative;
 }
 
-section div.slides img {
+section div.slides div.quote {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 500px;
 	height: 750px;
 	box-shadow: 0 0 30px rgba(0,0,0,0.25);
+}
+
+section div.slides div.quote p {
+	width: 100%;
+	height: 100%;
+	/* background-color: orange; */
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	padding: 10%
 }
 
 section div.info {
@@ -142,7 +147,7 @@ section.alternative div.split:last-child {
 
 @media (max-width: 700px) {
 	section div.slides, 
-	section div.slides img {
+	section div.slides div.quote {
 		width: 80vw;
 		height: 120vw;
 	}

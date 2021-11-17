@@ -1,22 +1,24 @@
 const slides = document.querySelectorAll('section div.slides')
+const colors = ['#F2BB05','#D74E09','#6E0E0A', '#32292F']
 
 slides.forEach((slide) => {
   let current = 0
   let z = 1000000
-  const images = slide.querySelectorAll('img')
+  const quotes = slide.querySelectorAll('div.quote')
 
-  images.forEach((image) => {
+  quotes.forEach((quote) => {
     z = z - 1
-    image.style.zIndex = z
+    quote.style.zIndex = z
+    quote.style.backgroundColor = colors[Math.floor((Math.random() * 4))]
   })
 
-  gsap.set(images, {opacity: 0})
+  gsap.set(quotes, {opacity: 0})
 
-  imagesLoaded(images, function () {
+  // imagesLoaded(quotes, function () {
     const timeline = gsap.timeline()
 
     timeline
-      .set(images, {
+      .set(quotes, {
         x: () => {
           return 500 * Math.random() - 250
         },
@@ -26,13 +28,13 @@ slides.forEach((slide) => {
         },
         opacity: 1
       })
-      .to(images, { x: 0, y: 0, stagger: -0.25 })
-      .to(images, {
+      .to(quotes, { x: 0, y: 0, stagger: -0.25 })
+      .to(quotes, {
         rotation: () => {
           return 16 * Math.random() - 8
         },
       })
-  })
+  // })
 
   slide.addEventListener('click', function () {
     z = z - 1
@@ -45,18 +47,18 @@ slides.forEach((slide) => {
       midAngle = -15
     }
 
-    const currentImage = images[current]
+    const currentQuote = quotes[current]
     const flipTimeline = gsap.timeline()
 
     flipTimeline
-      .set(currentImage, { x: 0 })
-      .to(currentImage, {
+      .set(currentQuote, { x: 0 })
+      .to(currentQuote, {
         x: direction,
         rotation: midAngle,
         scale: 1.1
       })
-      .set(currentImage, { zIndex: z })
-      .to(currentImage, {
+      .set(currentQuote, { zIndex: z })
+      .to(currentQuote, {
         x: 0,
         rotation: () => {
           return 16 * Math.random() - 8
@@ -65,6 +67,6 @@ slides.forEach((slide) => {
       })
 
     current = current + 1
-    current = current % images.length
+    current = current % quotes.length
   })
 })
