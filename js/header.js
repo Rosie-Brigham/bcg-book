@@ -1,10 +1,5 @@
 const waves = document.querySelector('div.waves')
 const carosels = document.querySelectorAll('div.waves div')
-const fadeInTimeline = gsap.timeline()
-
-fadeInTimeline
-  .set(waves, { opacity : 0})
-  .to(waves, { opacity : 1, delay : 1, stagger: 1, duration: 3 })
   
 carosels.forEach(carosel => {
   const spanTag = carosel.querySelector('span')
