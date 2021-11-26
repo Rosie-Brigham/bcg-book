@@ -4,7 +4,7 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Libre Baskerville', serif;
 	font-size: 24px;
 	line-height: 1.5;
 	
@@ -72,6 +72,7 @@ section div.slides div.quote {
 	left: 0px;
 	width: 500px;
 	height: 750px;
+	color: #111111;
 	box-shadow: 0 0 30px rgba(0,0,0,0.25);
 }
 
@@ -82,7 +83,7 @@ section div.slides div.quote p {
 	display: flex;
   align-items: center;
   justify-content: center;
-	padding: 10%
+	padding: 10%;
 }
 
 section div.info {
@@ -90,28 +91,9 @@ section div.info {
 	padding: 32px;
 }
 
-section a {
-	background-color: #ffffff;
-	color: #111111;
-	text-decoration: none;
-	font-size: 16px;
-	padding: 8px 24px;
-	border-radius: 50px;
-	display: inline-flex;
-	align-items: center;
-}
-
-section a img {
-	margin: 0 0 0 8px;
-	width: 10px;
-	height: 16px;
-	object-fit: cover;
-	object-position: center right;
-	transition: width 0.25s;
-}
-
-section a:hover img {
-	width: 25px;
+section div.info p {
+	font-family: 'Courgette', cursive;
+	font-size: 2.5rem;
 }
 
 section h2 {
@@ -150,5 +132,6 @@ section.alternative div.split:last-child {
 	section div.slides div.quote {
 		width: 80vw;
 		height: 120vw;
+		font-size: 1rem;
 	}
 }

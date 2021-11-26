@@ -1,5 +1,5 @@
 const slides = document.querySelectorAll('section div.slides')
-const colors = ['#F2BB05','#D74E09','#6E0E0A', '#32292F']
+const colors = ['#FAF6DC','#F5F1E4','#FAF0DC', '#C3CBDE']
 
 slides.forEach((slide) => {
   let current = 0
@@ -24,11 +24,11 @@ slides.forEach((slide) => {
         },
         y: '500%',
         rotation: () => {
-          return 90 * Math.random() - 45
+          return 20 * Math.random() - 5
         },
         opacity: 1
       })
-      .to(quotes, { x: 0, y: 0, stagger: -0.25 })
+      .to(quotes, { x: 0, y: 0, stagger: -0.05 })
       .to(quotes, {
         rotation: () => {
           return 16 * Math.random() - 8
