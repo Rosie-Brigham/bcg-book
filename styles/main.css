@@ -79,13 +79,38 @@ section div.slides div.quote {
 section div.slides div.quote p {
 	width: 100%;
 	height: 100%;
-	/* background-color: orange; */
 	display: flex;
   align-items: center;
   justify-content: center;
 	padding: 10%;
 }
 
+section div.slides div.quote #first {
+	width: 100%;
+	height: 100%;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	flex-direction: column;
+}
+
+section div.quote p span {
+	font-weight: bold;
+	font-style: italic;
+	display: contents;
+}
+
+h1 {
+	font-family: 'Courgette', cursive;
+	line-height: 1;
+	font-size: 5rem;
+	padding: 20% 10% 10% 10%;
+}
+
+section div.slides div.quote #first p {
+	font-size: 0.7rem;
+
+}
 section div.info {
 	max-width: 480px;
 	padding: 32px;
@@ -96,12 +121,13 @@ section div.info p {
 	font-size: 2.5rem;
 }
 
-section h2 {
-	font-size: 32px;
-}
 
-section p {
-	margin: 32px 0 0 0;
+
+section h2 {
+	font-family: 'Courgette', cursive;
+	font-size: 2.5rem;
+	line-height: 1.;
+	color: #F5F1E4;
 }
 
 section.alternative div.split:first-child {
@@ -133,5 +159,15 @@ section.alternative div.split:last-child {
 		width: 80vw;
 		height: 120vw;
 		font-size: 1rem;
+	}
+
+	section div.slides div.quote p {
+		margin: 0;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+	.long-quote {
+		font-size: 0.9rem;
 	}
 }
