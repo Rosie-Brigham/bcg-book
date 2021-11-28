@@ -135,6 +135,7 @@ section div.slides div#last  {
 }
 section div.slides div#last span {
 	padding: 10%;
+	display: block;
 }
 
 section div.info {
